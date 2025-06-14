@@ -1,0 +1,114 @@
+:root {
+  --slider-height: 5px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  margin: 20px 0 0 0;
+}
+
+.slider {
+  position: relative;
+  height: var(--slider-height);
+  border-radius: 10px;
+  background: #e2e8f0;
+  margin: 5px 0;
+  border: 1px solid #cbd5e1;
+}
+
+.sliderTrack {
+  position: absolute;
+  border-radius: 10px;
+  height: var(--slider-height);
+  background: #e2e8f0;
+  width: 100%;
+  z-index: 1;
+}
+
+.sliderRange {
+  position: absolute;
+  border-radius: 10px;
+  height: var(--slider-height);
+  background: #333;
+  z-index: 2;
+}
+
+.thumb {
+  pointer-events: none;
+  position: absolute;
+  height: var(--slider-height);
+  width: 100%;
+  outline: none;
+  background: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  top: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.thumb::-webkit-slider-thumb {
+  background: #ffffff;
+  border: 2px solid #cbd5e1;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  -webkit-appearance: none;
+  pointer-events: all;
+  position: relative;
+  top: 0;
+  margin: 0;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.thumb::-moz-range-thumb {
+  background: #ffffff;
+  border: 2px solid #cbd5e1;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  pointer-events: all;
+  position: relative;
+  -moz-appearance: none;
+  margin: 0;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.thumb::-moz-range-track {
+  background: transparent;
+  border: none;
+  height: var(--slider-height);
+  border-radius: 10px;
+}
+
+.thumb::-webkit-slider-runnable-track {
+  background: transparent;
+  border: none;
+  height: var(--slider-height);
+  border-radius: 10px;
+}
+
+.thumb::-moz-focus-outer {
+  border: 0;
+}
+
+.thumbZindex3 {
+  z-index: 3;
+}
+
+.thumb::-webkit-slider-thumb:hover,
+.thumb::-webkit-slider-thumb:active {
+  transform: none;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.thumb::-moz-range-thumb:hover,
+.thumb::-moz-range-thumb:active {
+  transform: none;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}

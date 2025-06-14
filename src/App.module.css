@@ -1,0 +1,29 @@
+@import './styles/customMediaQueries.css';
+
+.mainContent {
+  gap: 30px;
+  padding: 0 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+
+  @media (--viewportMedium) {
+    display: flex;
+    justify-content: center;
+    padding: 0 3rem;
+  }
+
+  @media (--viewportLarge) {
+    padding: 0 5rem;
+  }
+}
+
+.rightSection {
+  @media (--viewportLarge) {
+    width: 755px;
+  }
+
+  @media (--viewportLargeWithPaddings) {
+    width: 1000px;
+  }
+}
