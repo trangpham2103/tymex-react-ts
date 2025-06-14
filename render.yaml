@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "json-server": "^0.17.0"
+  },
+  "type": "module"
+}
