@@ -68,23 +68,30 @@ function App() {
   );
 
   const renderMainContent = () => {
-    if (isLoading) return <LoadingState />;
-    if (error) return <ErrorState message={error} />;
+    if (isLoading) return <LoadingState data-testid="mock-loading-state" />;
+    if (error)
+      return <ErrorState message={error} data-testid="mock-error-state" />;
     if (filteredProducts.length === 0)
-      return <EmptyState onReset={handleResetFilters} />;
+      return (
+        <EmptyState
+          onReset={handleResetFilters}
+          data-testid="mock-empty-state"
+        />
+      );
 
     return (
       <ProductGrid
         products={visibleFilteredProducts}
         onLoadMore={handleLoadMore}
         hasMore={visibleProducts < filteredProducts.length}
+        data-testid="mock-product-grid"
       />
     );
   };
 
   return (
     <>
-      <Header newArrivals={newArrivals} />
+      <Header newArrivals={newArrivals} data-testid="mock-header" />
       <main className={css.mainContent}>
         <FilterSection
           filters={filterState}
@@ -92,6 +99,7 @@ function App() {
             dispatch({ type: 'SET_FILTER', payload: { key, value } })
           }
           onResetFilters={handleResetFilters}
+          data-testid="mock-filter-section"
         />
         <div className={css.rightSection}>
           <CategorySection
@@ -102,11 +110,12 @@ function App() {
                 payload: { key: 'selectedCategory', value },
               })
             }
+            data-testid="mock-category-section"
           />
           {renderMainContent()}
         </div>
       </main>
-      <Footer />
+      <Footer data-testid="mock-footer" />
     </>
   );
 }

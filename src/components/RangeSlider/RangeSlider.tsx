@@ -71,7 +71,11 @@ const RangeSlider: React.FC<RangeSlider> = ({
 
       <div className={css.slider}>
         <div className={css.sliderTrack} />
-        <div ref={range} className={css.sliderRange} />
+        <div
+          ref={range}
+          className={css.sliderRange}
+          data-testid="slider-range"
+        />
       </div>
     </div>
   );
