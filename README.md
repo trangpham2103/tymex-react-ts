@@ -1,4 +1,4 @@
-# Tymex Assignment
+# TymeX Assignment
 
 A frontend assignment project built using React, TypeScript, and Vite. 
 
@@ -82,7 +82,7 @@ To check test coverage:
 
 ### Design
 
-- ![Wireframe](https://github.com/trangpham2103/tymex-react-ts/raw/main/resources/wireframe.png)
+- [Wireframe](https://github.com/trangpham2103/tymex-react-ts/raw/main/resources/Wireframe.png)
 
 
 ### Mock Data
